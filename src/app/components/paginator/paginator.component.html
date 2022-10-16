@@ -1,9 +1,9 @@
 <div *ngIf="!hidden">
     <ng-container *ngFor="let navButton of navButtons">
-        <span *ngIf="navButton.targetPageIdx !== undefined" class="active" (click)="navigateTo(navButton.targetPageIdx)">
+        <span *ngIf="navButton.pageIdx !== undefined" class="active" (click)="navigateTo(navButton.pageIdx)">
             {{ navButton.label }}
         </span>
-        <span *ngIf="navButton.targetPageIdx === undefined" [class]="navButton.currPage ? 'currPage' : ''">
+        <span *ngIf="navButton.pageIdx === undefined" [class]="navButton.currPage ? 'currPage' : ''">
             {{ navButton.label }}
         </span>
     </ng-container>

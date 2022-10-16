@@ -45,7 +45,7 @@ export class NavButtonBuilder {
             navButton.currPage = true;
         }
         if (pageIdx != this.currPageIdx) {
-            navButton.targetPageIdx = pageIdx;
+            navButton.pageIdx = pageIdx;
         }
         return navButton;
     }
@@ -53,7 +53,7 @@ export class NavButtonBuilder {
     private navButtonFirst(): NavButton {
         const navButton: NavButton = { label: '⟪' };
         if (!!this.currPageIdx) {
-            navButton.targetPageIdx = 0;
+            navButton.pageIdx = 0;
         }
         return navButton;
     }
@@ -61,7 +61,7 @@ export class NavButtonBuilder {
     private navButtonPrev(): NavButton {
         const navButton: NavButton = { label: '⟨' };
         if (!!this.currPageIdx) {
-            navButton.targetPageIdx = this.currPageIdx - 1;
+            navButton.pageIdx = this.currPageIdx - 1;
         }
         return navButton;
     }
@@ -69,7 +69,7 @@ export class NavButtonBuilder {
     private navButtonNext(): NavButton {
         const navButton: NavButton = { label: '⟩' };
         if (this.currPageIdx < this.idxLastPage) {
-            navButton.targetPageIdx = this.currPageIdx + 1;
+            navButton.pageIdx = this.currPageIdx + 1;
         }
         return navButton;
     }
@@ -77,7 +77,7 @@ export class NavButtonBuilder {
     private navButtonLast(): NavButton {
         const navButton: NavButton = { label: '⟫' };
         if (this.currPageIdx < this.idxLastPage) {
-            navButton.targetPageIdx = this.idxLastPage;
+            navButton.pageIdx = this.idxLastPage;
         }
         return navButton;
     }

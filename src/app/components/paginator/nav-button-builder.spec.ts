@@ -22,8 +22,8 @@ describe('NavButtonBuilder', () => {
         expect(navButtons).toEqual([
             { label: '⟨' },
             { label: 1, currPage: true },
-            { label: 2, targetPageIdx: 1 },
-            { label: '⟩', targetPageIdx: 1 }
+            { label: 2, pageIdx: 1 },
+            { label: '⟩', pageIdx: 1 }
         ]);
     });
 
@@ -34,8 +34,8 @@ describe('NavButtonBuilder', () => {
             .build();
 
         expect(navButtons).toEqual([
-            { label: '⟨', targetPageIdx: 0 },
-            { label: 1, targetPageIdx: 0 },
+            { label: '⟨', pageIdx: 0 },
+            { label: 1, pageIdx: 0 },
             { label: 2, currPage: true },
             { label: '⟩' }
         ]);
@@ -51,13 +51,13 @@ describe('NavButtonBuilder', () => {
             { label: '⟪' },
             { label: '⟨' },
             { label: 1, currPage: true },
-            { label: 2, targetPageIdx: 1 },
-            { label: 3, targetPageIdx: 2 },
-            { label: 4, targetPageIdx: 3 },
-            { label: 5, targetPageIdx: 4 },
-            { label: 6, targetPageIdx: 5 },
-            { label: '⟩', targetPageIdx: 1 },
-            { label: '⟫', targetPageIdx: 5 }
+            { label: 2, pageIdx: 1 },
+            { label: 3, pageIdx: 2 },
+            { label: 4, pageIdx: 3 },
+            { label: 5, pageIdx: 4 },
+            { label: 6, pageIdx: 5 },
+            { label: '⟩', pageIdx: 1 },
+            { label: '⟫', pageIdx: 5 }
         ]);
     });
 
@@ -68,16 +68,16 @@ describe('NavButtonBuilder', () => {
             .build();
 
         expect(navButtons).toEqual([
-            { label: '⟪', targetPageIdx: 0 },
-            { label: '⟨', targetPageIdx: 2 },
-            { label: 1, targetPageIdx: 0 },
-            { label: 2, targetPageIdx: 1 },
-            { label: 3, targetPageIdx: 2 },
+            { label: '⟪', pageIdx: 0 },
+            { label: '⟨', pageIdx: 2 },
+            { label: 1, pageIdx: 0 },
+            { label: 2, pageIdx: 1 },
+            { label: 3, pageIdx: 2 },
             { label: 4, currPage: true },
-            { label: 5, targetPageIdx: 4 },
-            { label: 6, targetPageIdx: 5 },
-            { label: '⟩', targetPageIdx: 4 },
-            { label: '⟫', targetPageIdx: 5 }
+            { label: 5, pageIdx: 4 },
+            { label: 6, pageIdx: 5 },
+            { label: '⟩', pageIdx: 4 },
+            { label: '⟫', pageIdx: 5 }
         ]);
     });
 
@@ -88,13 +88,13 @@ describe('NavButtonBuilder', () => {
             .build();
 
         expect(navButtons).toEqual([
-            { label: '⟪', targetPageIdx: 0 },
-            { label: '⟨', targetPageIdx: 4 },
-            { label: 1, targetPageIdx: 0 },
-            { label: 2, targetPageIdx: 1 },
-            { label: 3, targetPageIdx: 2 },
-            { label: 4, targetPageIdx: 3 },
-            { label: 5, targetPageIdx: 4 },
+            { label: '⟪', pageIdx: 0 },
+            { label: '⟨', pageIdx: 4 },
+            { label: 1, pageIdx: 0 },
+            { label: 2, pageIdx: 1 },
+            { label: 3, pageIdx: 2 },
+            { label: 4, pageIdx: 3 },
+            { label: 5, pageIdx: 4 },
             { label: 6, currPage: true },
             { label: '⟩' },
             { label: '⟫' }
