@@ -1,0 +1,4 @@
+<div *ngFor="let row of pageData">{{ row }}</div>
+<br>
+<app-paginator [config]="{ pageSize: 10 }" [data]="baseData" (onPageChange)="pageData = $event.pageData">
+</app-paginator>

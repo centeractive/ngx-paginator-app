@@ -1,0 +1,12 @@
+div {
+    display: flex;
+    gap: 1em;
+}
+
+.currPage {
+    font-weight: bold;
+}
+
+.active {
+    cursor: pointer;
+}
